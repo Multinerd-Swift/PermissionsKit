@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name    = 'PermissionsKit'
-    s.version = '0.1.0'
+    s.version = '1.0.0'
     s.summary = 'PermissionsKit is a wrapper to handle the various iOS permissions.'
     
     s.homepage = 'https://github.com/Multinerd-Swift/PermissionsKit'
@@ -9,13 +9,12 @@ Pod::Spec.new do |s|
     s.author   = { 'Multinerd' => 'multinerd@users.noreply.github.com' }
     s.source   = { :git => 'https://github.com/Multinerd-Swift/PermissionsKit.git', :tag => s.version.to_s }
     
+    s.frameworks = 'UIKit'
     s.ios.deployment_target = '10.0'
     
-    
-    s.source_files = 'PermissionsKit/**/*.swift', 'PermissionsKit/Core/**/*.swift', 'PermissionsKit/Permissions/**/*.swift'
-    
-    s.frameworks = 'UIKit'
-    
+    s.source_files = 'PermissionsKit/**/*.swift',
+                     'PermissionsKit/Core/**/*.swift',
+                     'PermissionsKit/Permissions/**/*.swift'
     
     s.subspec 'Core' do |ss|
         ss.source_files = 'PermissionsKit/Core/**/*.swift'
