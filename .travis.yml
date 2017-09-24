@@ -1,0 +1,16 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode9
+language: swift
+podfile: Example/Podfile
+before_install:
+- gem install cocoapods
+- pod install --repo-update --project-directory=Example
+script:
+- pod lib lint
+- cd Example
+- xcodebuild -workspace PermissionsKit.xcworkspace -scheme PermissionsKit-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' build
+after_success:
+- bash <(curl -s https://codecov.io/bash)
