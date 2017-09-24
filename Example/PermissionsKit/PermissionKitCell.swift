@@ -1,12 +1,12 @@
 import PermissionsKit
 import UIKit
 
-class PermissionKitCell: UITableViewCell {
+class PermissionsKitCell: UITableViewCell {
 
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var statusLbl: UILabel!
 
-    var viewModel: PermissionKitCellVM? {
+    var viewModel: PermissionsKitCellVM? {
         didSet {
             self.titleLbl.text = viewModel?.title
 
@@ -37,7 +37,7 @@ class PermissionKitCell: UITableViewCell {
         })
     }
 
-    private func updateUI(_ status: PermissionKitStatus) {
+    private func updateUI(_ status: PermissionsKitStatus) {
 
         DispatchQueue.main.async {
             switch status {
@@ -56,7 +56,7 @@ class PermissionKitCell: UITableViewCell {
     }
 }
 
-class PermissionKitCellVMServiceProgrammatically {
+class PermissionsKitCellVMServiceProgrammatically {
 
     static private var permissions = [ [ "label": "Bluetooth" ], [ "label": "Camera" ], [ "label": "CloudKit" ], [ "label": "Contacts" ], [ "label": "Events" ], [ "label": "Health" ], [ "label": "Media Library" ], [ "label": "Microphone" ], [ "label": "Motion" ], [ "label": "Notifications" ], [ "label": "Photos" ], [ "label": "Reminders" ], [ "label": "Speech" ], [ "label": "Location - Always" ], [ "label": "Location - When In Use" ] ]
 
@@ -64,50 +64,50 @@ class PermissionKitCellVMServiceProgrammatically {
         return self.permissions.count
     }
 
-    static func buildVM(index: Int) -> PermissionKitCellVM {
+    static func buildVM(index: Int) -> PermissionsKitCellVM {
 
         let data = permissions[index]
 
-        let configuration = PermissionKitConfigurations(frequency: .onceADay, presentInitialPopup: true, presentReEnablePopup: true)
-        let initialPopupData = PermissionKitAlert(title: data["label"]!, message: "Enable \(data["label"]!) Permissions!", allowButtonTitle: "Allow 👍🏼", denyButtonTitle: "No! 👎🏼")
+        let configuration = PermissionsKitConfigurations(frequency: .onceADay, presentInitialPopup: true, presentReEnablePopup: true)
+        let initialPopupData = PermissionsKitAlert(title: data["label"]!, message: "Enable \(data["label"]!) Permissions!", allowButtonTitle: "Allow 👍🏼", denyButtonTitle: "No! 👎🏼")
 
-        let reenablePopupData = PermissionKitAlert(title: data["label"]!, message: "Enable \(data["label"]!) Permissions!", allowButtonTitle: "Allow 👍🏼", denyButtonTitle: "No! 👎🏼")
+        let reenablePopupData = PermissionsKitAlert(title: data["label"]!, message: "Enable \(data["label"]!) Permissions!", allowButtonTitle: "Allow 👍🏼", denyButtonTitle: "No! 👎🏼")
 
         let permission = getPermissionType(index: index, configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reenablePopupData)
-        return PermissionKitCellVM(permission: permission!, title: data["label"]!)
+        return PermissionsKitCellVM(permission: permission!, title: data["label"]!)
     }
 
-    static private func getPermissionType(index: Int, configuration: PermissionKitConfigurations, initialPopupData: PermissionKitAlert, reEnablePopupData: PermissionKitAlert) -> PermissionKitProtocol? {
+    static private func getPermissionType(index: Int, configuration: PermissionsKitConfigurations, initialPopupData: PermissionsKitAlert, reEnablePopupData: PermissionsKitAlert) -> PermissionsKitProtocol? {
 
         switch index {
-            case 0: return PermissionKitBluetooth(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 1: return PermissionKitCamera(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 2: return PermissionKitCloudKit(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 3:return PermissionKitContacts(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 4:return PermissionKitEvents(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 5:return PermissionKitHealth(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 6:return PermissionKitMediaLibrary(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 7:return PermissionKitMicrophone(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 8:return PermissionKitMotion(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 9:return PermissionKitNotifications(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 10:return PermissionKitPhoto(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 11:return PermissionKitReminders(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 12:return PermissionKitSpeechRecognizer(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 13:return PermissionKitLocationAlways(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
-            case 14:return PermissionKitLocationWhenInUse(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 0: return PermissionsKitBluetooth(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 1: return PermissionsKitCamera(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 2: return PermissionsKitCloudKit(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 3:return PermissionsKitContacts(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 4:return PermissionsKitEvents(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 5:return PermissionsKitHealth(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 6:return PermissionsKitMediaLibrary(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 7:return PermissionsKitMicrophone(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 8:return PermissionsKitMotion(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 9:return PermissionsKitNotifications(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 10:return PermissionsKitPhoto(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 11:return PermissionsKitReminders(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 12:return PermissionsKitSpeechRecognizer(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 13:return PermissionsKitLocationAlways(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
+            case 14:return PermissionsKitLocationWhenInUse(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
             default: return nil
         }
     }
 
 }
 
-class PermissionKitCellVM {
+class PermissionsKitCellVM {
 
-    private(set) var permission: PermissionKitProtocol
+    private(set) var permission: PermissionsKitProtocol
 
     private(set) var title: String
 
-    init(permission: PermissionKitProtocol, title: String) {
+    init(permission: PermissionsKitProtocol, title: String) {
 
         self.permission = permission
         self.title = title

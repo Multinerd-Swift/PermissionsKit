@@ -7,46 +7,46 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06A2CD6DCEA1BD19CE584EF277714722 /* PermissionKitFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C60973864E9A59364BBE11CC22E6A /* PermissionKitFrequency.swift */; };
-		112C4D3CAF381475DE44B0677A72A264 /* PermissionKitReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14B1BC13C8527D67366C5A163EF72 /* PermissionKitReminders.swift */; };
-		12B381B260BB8CD8B313050D1CB0092B /* PermissionKitConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEA58A9B98A2F924FA326AAD20A8AD7 /* PermissionKitConfigurations.swift */; };
+		06A2CD6DCEA1BD19CE584EF277714722 /* PermissionsKitFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523C60973864E9A59364BBE11CC22E6A /* PermissionsKitFrequency.swift */; };
+		112C4D3CAF381475DE44B0677A72A264 /* PermissionsKitReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E14B1BC13C8527D67366C5A163EF72 /* PermissionsKitReminders.swift */; };
+		12B381B260BB8CD8B313050D1CB0092B /* PermissionsKitConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEA58A9B98A2F924FA326AAD20A8AD7 /* PermissionsKitConfigurations.swift */; };
 		1316EB0082D628407756EEBF74A2E8DC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EDBE457F4781B1173BC87C4CC982 /* UIKit.framework */; };
 		13F31546833AE216599575751E668E96 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A507892737478612C16418370E35AAB /* CoreLocation.framework */; };
 		1AB3C5BBEEEE6C541158E65A4CF25BFA /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F30D4F8D17FAB7C1DB5A93FB8A19D55D /* CloudKit.framework */; };
 		2031B928A6D6EDE6904AF80D17FD6D92 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98BA72B94AEA5CFC2098FE58E19A470E /* AddressBook.framework */; };
-		286512A4C68682959B4203219423FD2F /* PermissionKitSpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F0B87A95E9A72C671B0A2E506C526 /* PermissionKitSpeechRecognizer.swift */; };
+		286512A4C68682959B4203219423FD2F /* PermissionsKitSpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6F0B87A95E9A72C671B0A2E506C526 /* PermissionsKitSpeechRecognizer.swift */; };
 		40EEC4ADC8A7F1761DCA19B6E2CBE1BB /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 022E583A12FFC445E7B54856D73D8D08 /* AssetsLibrary.framework */; };
-		440322DED7224599B22973B7085F4DCB /* PermissionKitCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0B330122DF9A150FFF83E8153206B /* PermissionKitCamera.swift */; };
-		4467AA454D02E69F8CA42DDD511E47C1 /* PermissionKitNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3B05E8138944A0ECF85A0DEEB6AE /* PermissionKitNotifications.swift */; };
-		4661EC0E14147B0F5451D95A4EB42D38 /* PermissionKitLocationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C808EB96EAE339ED1D650CD12B5CE44 /* PermissionKitLocationBase.swift */; };
-		4B9BFC7D4B6DF254148DE81C1A994804 /* PermissionKitLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BFE953178E09C7992A39578AA06D1 /* PermissionKitLocalizationManager.swift */; };
-		55D4DBC9D566461E38D6F54D38CFB301 /* PermissionKitHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E04904A498376746A0C0B695C2DF0 /* PermissionKitHealth.swift */; };
-		5A739A335D658734E5A664B56F5C2593 /* PermissionKitPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91443AC84678AFB639D1E843ADDCFBE7 /* PermissionKitPhoto.swift */; };
+		440322DED7224599B22973B7085F4DCB /* PermissionsKitCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E0B330122DF9A150FFF83E8153206B /* PermissionsKitCamera.swift */; };
+		4467AA454D02E69F8CA42DDD511E47C1 /* PermissionsKitNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B32A3B05E8138944A0ECF85A0DEEB6AE /* PermissionsKitNotifications.swift */; };
+		4661EC0E14147B0F5451D95A4EB42D38 /* PermissionsKitLocationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C808EB96EAE339ED1D650CD12B5CE44 /* PermissionsKitLocationBase.swift */; };
+		4B9BFC7D4B6DF254148DE81C1A994804 /* PermissionsKitLocalizationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 505BFE953178E09C7992A39578AA06D1 /* PermissionsKitLocalizationManager.swift */; };
+		55D4DBC9D566461E38D6F54D38CFB301 /* PermissionsKitHealth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204E04904A498376746A0C0B695C2DF0 /* PermissionsKitHealth.swift */; };
+		5A739A335D658734E5A664B56F5C2593 /* PermissionsKitPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91443AC84678AFB639D1E843ADDCFBE7 /* PermissionsKitPhoto.swift */; };
 		5E026B14850DF052FED9F2F85C024F2C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D2CEA0651D9C1652035740DBAC5942 /* AVFoundation.framework */; };
-		6353161630B810919710604AE34DA474 /* PermissionKitLocationAlways.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49ACCDE3B4FD6E3765217681369AB30 /* PermissionKitLocationAlways.swift */; };
+		6353161630B810919710604AE34DA474 /* PermissionsKitLocationAlways.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49ACCDE3B4FD6E3765217681369AB30 /* PermissionsKitLocationAlways.swift */; };
 		66FE07486DE38C9C16A3C790C2D487EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55ABCC4DACAAA7FF8495C6ED9C82496 /* Foundation.framework */; };
 		7191B7A5D7007DBA6F85C4DA0D64CA43 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C8C9EB86D9BB91361EDC3B12A90DD45 /* HealthKit.framework */; };
-		724C84E9DE3180553218BEE53E88D9D7 /* PermissionKitMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58C96B24983327BAB9C442B9E7ABB7C /* PermissionKitMotion.swift */; };
-		7C2BA47E0D57920B2D8633113A813A86 /* PermissionKitCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52A714282F60E665CED3B23E22174E /* PermissionKitCloudKit.swift */; };
+		724C84E9DE3180553218BEE53E88D9D7 /* PermissionsKitMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D58C96B24983327BAB9C442B9E7ABB7C /* PermissionsKitMotion.swift */; };
+		7C2BA47E0D57920B2D8633113A813A86 /* PermissionsKitCloudKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC52A714282F60E665CED3B23E22174E /* PermissionsKitCloudKit.swift */; };
 		850D0BF001437F3D6302790701892230 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55ABCC4DACAAA7FF8495C6ED9C82496 /* Foundation.framework */; };
 		86B2127FF6B3C25D58E52555E347A5CF /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13F1EF37954F750945DB7881F3F050F0 /* MediaPlayer.framework */; };
-		8903636CEACB647A4D67C70E5D858327 /* PermissionKitEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1B0F7D1ECA94C6E3B5B6D4914F007 /* PermissionKitEvents.swift */; };
-		8AA85F523838FA4C99FFFDEE7EB567D4 /* PermissionKitMediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491D126066354A4744167BD6D9469E8 /* PermissionKitMediaLibrary.swift */; };
-		8DE2B986D653782D29D77A9EDD3149CC /* PermissionKitAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315C9E117A7D285B46B7930B7D9CD2BB /* PermissionKitAlert.swift */; };
+		8903636CEACB647A4D67C70E5D858327 /* PermissionsKitEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EE1B0F7D1ECA94C6E3B5B6D4914F007 /* PermissionsKitEvents.swift */; };
+		8AA85F523838FA4C99FFFDEE7EB567D4 /* PermissionsKitMediaLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7491D126066354A4744167BD6D9469E8 /* PermissionsKitMediaLibrary.swift */; };
+		8DE2B986D653782D29D77A9EDD3149CC /* PermissionsKitAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315C9E117A7D285B46B7930B7D9CD2BB /* PermissionsKitAlert.swift */; };
 		A98D1925B78F1CB14C0E35EC7A4A4D94 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F802852C42CB37B31469C950F525B953 /* CoreBluetooth.framework */; };
-		A9DBA1A42109ACE64077A6FEEAF61AF7 /* PermissionKitLocationWhenInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7FBF8001332FAF589EBDBD39F3B00 /* PermissionKitLocationWhenInUse.swift */; };
+		A9DBA1A42109ACE64077A6FEEAF61AF7 /* PermissionsKitLocationWhenInUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7A7FBF8001332FAF589EBDBD39F3B00 /* PermissionsKitLocationWhenInUse.swift */; };
 		AFE1623ED33EC2B96B912E24B26D6A46 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60320E39553C9ADCF395F19D6CF26C87 /* CoreMotion.framework */; };
-		B4008CD59A780042D95A0836D6F82384 /* PermissionKitMicrophone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3FE08676EB534E9AE55317C2ACC02 /* PermissionKitMicrophone.swift */; };
+		B4008CD59A780042D95A0836D6F82384 /* PermissionsKitMicrophone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1C3FE08676EB534E9AE55317C2ACC02 /* PermissionsKitMicrophone.swift */; };
 		BED08BBCA178DDD1B634AF833621B9C6 /* PermissionsKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8705A6901A3C73E9FAA114C39FDE41F7 /* PermissionsKit-dummy.m */; };
 		C32DAE1505C791B815B8085D3889AEB3 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1992028A7C4C5936002B78B80F721EAB /* EventKit.framework */; };
-		C506721872A82AB3A5505BFE22953819 /* PermissionKitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B1C63E6239C175B7A22E119D795FED /* PermissionKitBase.swift */; };
-		CD1CF523A1AFFE532E1A9745D3B357E5 /* PermissionKitContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964370EB00048C30FAECD01B353FCA0 /* PermissionKitContacts.swift */; };
+		C506721872A82AB3A5505BFE22953819 /* PermissionsKitBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B1C63E6239C175B7A22E119D795FED /* PermissionsKitBase.swift */; };
+		CD1CF523A1AFFE532E1A9745D3B357E5 /* PermissionsKitContacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = D964370EB00048C30FAECD01B353FCA0 /* PermissionsKitContacts.swift */; };
 		D6240F9848B340913E01542BE583E86B /* Pods-PermissionsKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24249D0F2FC1A38DC22C1D8E128CBA64 /* Pods-PermissionsKit_Example-dummy.m */; };
 		D85CEC8854B5737FBFA398916E035A4F /* PermissionsKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0896B7C11755AA80ADB425E817B0AEF /* PermissionsKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9A62EC551C47E2AAC7E5A5FD7DABD24 /* Pods-PermissionsKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 67BE2BF87891BC4055AC41D2F7912533 /* Pods-PermissionsKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EC4D791DFDC79E52B880B034F929B2E2 /* PermissionKitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C443AD7342805CC6A81D32ED5625C /* PermissionKitProtocol.swift */; };
-		F6BFB057EB2640C7E8DEEBB66C756347 /* PermissionKitStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF66D3C5BAE7BFD70B7DE3E028F15 /* PermissionKitStatus.swift */; };
-		F923C6AA2D9AFBB0770B7B7D5B936045 /* PermissionKitBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B318B02F528910E20CBE408B834C2CA /* PermissionKitBluetooth.swift */; };
+		EC4D791DFDC79E52B880B034F929B2E2 /* PermissionsKitProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E17C443AD7342805CC6A81D32ED5625C /* PermissionsKitProtocol.swift */; };
+		F6BFB057EB2640C7E8DEEBB66C756347 /* PermissionsKitStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05FF66D3C5BAE7BFD70B7DE3E028F15 /* PermissionsKitStatus.swift */; };
+		F923C6AA2D9AFBB0770B7B7D5B936045 /* PermissionsKitBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B318B02F528910E20CBE408B834C2CA /* PermissionsKitBluetooth.swift */; };
 		FFDB014EF6B36DE5BB3A4E1DED584059 /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A1796343F83174D973928C9D6567F04 /* Speech.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,59 +63,59 @@
 /* Begin PBXFileReference section */
 		022E583A12FFC445E7B54856D73D8D08 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
 		029DDB3EB55201463C470F0722232D3F /* Pods-PermissionsKit_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PermissionsKit_Example-resources.sh"; sourceTree = "<group>"; };
-		093D2DCEB608F2CB5B18648DB7B3F7F8 /* Pods_PermissionsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_PermissionsKit_Example.framework; path = "Pods-PermissionsKit_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		093D2DCEB608F2CB5B18648DB7B3F7F8 /* Pods_PermissionsKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PermissionsKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A507892737478612C16418370E35AAB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
 		10ED467F12B37B1BCE480F7A33F908A8 /* Pods-PermissionsKit_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PermissionsKit_Example-frameworks.sh"; sourceTree = "<group>"; };
 		13F1EF37954F750945DB7881F3F050F0 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		1992028A7C4C5936002B78B80F721EAB /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/EventKit.framework; sourceTree = DEVELOPER_DIR; };
-		1B318B02F528910E20CBE408B834C2CA /* PermissionKitBluetooth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitBluetooth.swift; sourceTree = "<group>"; };
-		204E04904A498376746A0C0B695C2DF0 /* PermissionKitHealth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitHealth.swift; sourceTree = "<group>"; };
+		1B318B02F528910E20CBE408B834C2CA /* PermissionsKitBluetooth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitBluetooth.swift; sourceTree = "<group>"; };
+		204E04904A498376746A0C0B695C2DF0 /* PermissionsKitHealth.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitHealth.swift; sourceTree = "<group>"; };
 		24249D0F2FC1A38DC22C1D8E128CBA64 /* Pods-PermissionsKit_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PermissionsKit_Example-dummy.m"; sourceTree = "<group>"; };
-		315C9E117A7D285B46B7930B7D9CD2BB /* PermissionKitAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitAlert.swift; sourceTree = "<group>"; };
-		38E45F1ED4250632AC22076C609C8A42 /* Pods-PermissionsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-PermissionsKit_Example.modulemap"; sourceTree = "<group>"; };
-		49E14B1BC13C8527D67366C5A163EF72 /* PermissionKitReminders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitReminders.swift; sourceTree = "<group>"; };
-		505BFE953178E09C7992A39578AA06D1 /* PermissionKitLocalizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitLocalizationManager.swift; sourceTree = "<group>"; };
+		315C9E117A7D285B46B7930B7D9CD2BB /* PermissionsKitAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitAlert.swift; sourceTree = "<group>"; };
+		38E45F1ED4250632AC22076C609C8A42 /* Pods-PermissionsKit_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-PermissionsKit_Example.modulemap"; sourceTree = "<group>"; };
+		49E14B1BC13C8527D67366C5A163EF72 /* PermissionsKitReminders.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitReminders.swift; sourceTree = "<group>"; };
+		505BFE953178E09C7992A39578AA06D1 /* PermissionsKitLocalizationManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitLocalizationManager.swift; sourceTree = "<group>"; };
 		51D2CEA0651D9C1652035740DBAC5942 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		523C60973864E9A59364BBE11CC22E6A /* PermissionKitFrequency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitFrequency.swift; sourceTree = "<group>"; };
+		523C60973864E9A59364BBE11CC22E6A /* PermissionsKitFrequency.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitFrequency.swift; sourceTree = "<group>"; };
 		5A1796343F83174D973928C9D6567F04 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Speech.framework; sourceTree = DEVELOPER_DIR; };
 		5E6347298E218CCCB26AA7C88D53D350 /* PermissionsKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PermissionsKit.xcconfig; sourceTree = "<group>"; };
 		60320E39553C9ADCF395F19D6CF26C87 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreMotion.framework; sourceTree = DEVELOPER_DIR; };
-		60B1C63E6239C175B7A22E119D795FED /* PermissionKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitBase.swift; sourceTree = "<group>"; };
+		60B1C63E6239C175B7A22E119D795FED /* PermissionsKitBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitBase.swift; sourceTree = "<group>"; };
 		67BE2BF87891BC4055AC41D2F7912533 /* Pods-PermissionsKit_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PermissionsKit_Example-umbrella.h"; sourceTree = "<group>"; };
 		690361102F83E33E9D4B58F556E9DA24 /* Pods-PermissionsKit_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PermissionsKit_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		7491D126066354A4744167BD6D9469E8 /* PermissionKitMediaLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitMediaLibrary.swift; sourceTree = "<group>"; };
+		7491D126066354A4744167BD6D9469E8 /* PermissionsKitMediaLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitMediaLibrary.swift; sourceTree = "<group>"; };
 		7DABE7C4A595BAE43800A23F0834FB0E /* Pods-PermissionsKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PermissionsKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		8705A6901A3C73E9FAA114C39FDE41F7 /* PermissionsKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PermissionsKit-dummy.m"; sourceTree = "<group>"; };
 		8C8C9EB86D9BB91361EDC3B12A90DD45 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
-		8EE1B0F7D1ECA94C6E3B5B6D4914F007 /* PermissionKitEvents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitEvents.swift; sourceTree = "<group>"; };
-		91443AC84678AFB639D1E843ADDCFBE7 /* PermissionKitPhoto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitPhoto.swift; sourceTree = "<group>"; };
-		927B4FBAB43914A2F2521C99BAB69DC1 /* PermissionsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = PermissionsKit.modulemap; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8EE1B0F7D1ECA94C6E3B5B6D4914F007 /* PermissionsKitEvents.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitEvents.swift; sourceTree = "<group>"; };
+		91443AC84678AFB639D1E843ADDCFBE7 /* PermissionsKitPhoto.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitPhoto.swift; sourceTree = "<group>"; };
+		927B4FBAB43914A2F2521C99BAB69DC1 /* PermissionsKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PermissionsKit.modulemap; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		98BA72B94AEA5CFC2098FE58E19A470E /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AddressBook.framework; sourceTree = DEVELOPER_DIR; };
-		9C808EB96EAE339ED1D650CD12B5CE44 /* PermissionKitLocationBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitLocationBase.swift; sourceTree = "<group>"; };
-		A9E0B330122DF9A150FFF83E8153206B /* PermissionKitCamera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitCamera.swift; sourceTree = "<group>"; };
-		AA5B6FE3C7D8B2DE17B43BD8315F5178 /* PermissionsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PermissionsKit.framework; path = PermissionsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C808EB96EAE339ED1D650CD12B5CE44 /* PermissionsKitLocationBase.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitLocationBase.swift; sourceTree = "<group>"; };
+		A9E0B330122DF9A150FFF83E8153206B /* PermissionsKitCamera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitCamera.swift; sourceTree = "<group>"; };
+		AA5B6FE3C7D8B2DE17B43BD8315F5178 /* PermissionsKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PermissionsKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB32D0B03E269653AC0F9998531E1B7B /* Pods-PermissionsKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PermissionsKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		B05FF66D3C5BAE7BFD70B7DE3E028F15 /* PermissionKitStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitStatus.swift; sourceTree = "<group>"; };
-		B1C3FE08676EB534E9AE55317C2ACC02 /* PermissionKitMicrophone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitMicrophone.swift; sourceTree = "<group>"; };
+		B05FF66D3C5BAE7BFD70B7DE3E028F15 /* PermissionsKitStatus.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitStatus.swift; sourceTree = "<group>"; };
+		B1C3FE08676EB534E9AE55317C2ACC02 /* PermissionsKitMicrophone.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitMicrophone.swift; sourceTree = "<group>"; };
 		B30C63E44AA154933E4D34A492477154 /* PermissionsKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PermissionsKit-prefix.pch"; sourceTree = "<group>"; };
-		B32A3B05E8138944A0ECF85A0DEEB6AE /* PermissionKitNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitNotifications.swift; sourceTree = "<group>"; };
+		B32A3B05E8138944A0ECF85A0DEEB6AE /* PermissionsKitNotifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitNotifications.swift; sourceTree = "<group>"; };
 		CCB067B5145B1A0871AA44CA8AE4A28D /* Pods-PermissionsKit_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PermissionsKit_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		D3B7168A5FAB2A9353D186D9215F73C3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D55ABCC4DACAAA7FF8495C6ED9C82496 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D58C96B24983327BAB9C442B9E7ABB7C /* PermissionKitMotion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitMotion.swift; sourceTree = "<group>"; };
+		D58C96B24983327BAB9C442B9E7ABB7C /* PermissionsKitMotion.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitMotion.swift; sourceTree = "<group>"; };
 		D83BBBE2C3D5593F90AFEEB7D7725757 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D964370EB00048C30FAECD01B353FCA0 /* PermissionKitContacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitContacts.swift; sourceTree = "<group>"; };
-		DC52A714282F60E665CED3B23E22174E /* PermissionKitCloudKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitCloudKit.swift; sourceTree = "<group>"; };
+		D964370EB00048C30FAECD01B353FCA0 /* PermissionsKitContacts.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitContacts.swift; sourceTree = "<group>"; };
+		DC52A714282F60E665CED3B23E22174E /* PermissionsKitCloudKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitCloudKit.swift; sourceTree = "<group>"; };
 		E0896B7C11755AA80ADB425E817B0AEF /* PermissionsKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PermissionsKit-umbrella.h"; sourceTree = "<group>"; };
-		E17C443AD7342805CC6A81D32ED5625C /* PermissionKitProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitProtocol.swift; sourceTree = "<group>"; };
-		E49ACCDE3B4FD6E3765217681369AB30 /* PermissionKitLocationAlways.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitLocationAlways.swift; sourceTree = "<group>"; };
-		E7A7FBF8001332FAF589EBDBD39F3B00 /* PermissionKitLocationWhenInUse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitLocationWhenInUse.swift; sourceTree = "<group>"; };
+		E17C443AD7342805CC6A81D32ED5625C /* PermissionsKitProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitProtocol.swift; sourceTree = "<group>"; };
+		E49ACCDE3B4FD6E3765217681369AB30 /* PermissionsKitLocationAlways.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitLocationAlways.swift; sourceTree = "<group>"; };
+		E7A7FBF8001332FAF589EBDBD39F3B00 /* PermissionsKitLocationWhenInUse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitLocationWhenInUse.swift; sourceTree = "<group>"; };
 		F30D4F8D17FAB7C1DB5A93FB8A19D55D /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 		F802852C42CB37B31469C950F525B953 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreBluetooth.framework; sourceTree = DEVELOPER_DIR; };
 		FB37EDBE457F4781B1173BC87C4CC982 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		FBEA58A9B98A2F924FA326AAD20A8AD7 /* PermissionKitConfigurations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitConfigurations.swift; sourceTree = "<group>"; };
-		FD6F0B87A95E9A72C671B0A2E506C526 /* PermissionKitSpeechRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionKitSpeechRecognizer.swift; sourceTree = "<group>"; };
+		FBEA58A9B98A2F924FA326AAD20A8AD7 /* PermissionsKitConfigurations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitConfigurations.swift; sourceTree = "<group>"; };
+		FD6F0B87A95E9A72C671B0A2E506C526 /* PermissionsKitSpeechRecognizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PermissionsKitSpeechRecognizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,13 +153,13 @@
 		0D7B1CDA9A71A7A2C404DE82BA066A7F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				315C9E117A7D285B46B7930B7D9CD2BB /* PermissionKitAlert.swift */,
-				60B1C63E6239C175B7A22E119D795FED /* PermissionKitBase.swift */,
-				FBEA58A9B98A2F924FA326AAD20A8AD7 /* PermissionKitConfigurations.swift */,
-				523C60973864E9A59364BBE11CC22E6A /* PermissionKitFrequency.swift */,
-				505BFE953178E09C7992A39578AA06D1 /* PermissionKitLocalizationManager.swift */,
-				E17C443AD7342805CC6A81D32ED5625C /* PermissionKitProtocol.swift */,
-				B05FF66D3C5BAE7BFD70B7DE3E028F15 /* PermissionKitStatus.swift */,
+				315C9E117A7D285B46B7930B7D9CD2BB /* PermissionsKitAlert.swift */,
+				60B1C63E6239C175B7A22E119D795FED /* PermissionsKitBase.swift */,
+				FBEA58A9B98A2F924FA326AAD20A8AD7 /* PermissionsKitConfigurations.swift */,
+				523C60973864E9A59364BBE11CC22E6A /* PermissionsKitFrequency.swift */,
+				505BFE953178E09C7992A39578AA06D1 /* PermissionsKitLocalizationManager.swift */,
+				E17C443AD7342805CC6A81D32ED5625C /* PermissionsKitProtocol.swift */,
+				B05FF66D3C5BAE7BFD70B7DE3E028F15 /* PermissionsKitStatus.swift */,
 			);
 			name = Core;
 			path = PermissionsKit/Core;
@@ -228,11 +228,10 @@
 		86E21BC1D260729D98C709D0059BF1AC /* Location */ = {
 			isa = PBXGroup;
 			children = (
-				E49ACCDE3B4FD6E3765217681369AB30 /* PermissionKitLocationAlways.swift */,
-				9C808EB96EAE339ED1D650CD12B5CE44 /* PermissionKitLocationBase.swift */,
-				E7A7FBF8001332FAF589EBDBD39F3B00 /* PermissionKitLocationWhenInUse.swift */,
+				E49ACCDE3B4FD6E3765217681369AB30 /* PermissionsKitLocationAlways.swift */,
+				9C808EB96EAE339ED1D650CD12B5CE44 /* PermissionsKitLocationBase.swift */,
+				E7A7FBF8001332FAF589EBDBD39F3B00 /* PermissionsKitLocationWhenInUse.swift */,
 			);
-			name = Location;
 			path = Location;
 			sourceTree = "<group>";
 		};
@@ -286,19 +285,19 @@
 		CD702E6893382D4B51D63A4AE26C92C5 /* Permissions */ = {
 			isa = PBXGroup;
 			children = (
-				1B318B02F528910E20CBE408B834C2CA /* PermissionKitBluetooth.swift */,
-				A9E0B330122DF9A150FFF83E8153206B /* PermissionKitCamera.swift */,
-				DC52A714282F60E665CED3B23E22174E /* PermissionKitCloudKit.swift */,
-				D964370EB00048C30FAECD01B353FCA0 /* PermissionKitContacts.swift */,
-				8EE1B0F7D1ECA94C6E3B5B6D4914F007 /* PermissionKitEvents.swift */,
-				204E04904A498376746A0C0B695C2DF0 /* PermissionKitHealth.swift */,
-				7491D126066354A4744167BD6D9469E8 /* PermissionKitMediaLibrary.swift */,
-				B1C3FE08676EB534E9AE55317C2ACC02 /* PermissionKitMicrophone.swift */,
-				D58C96B24983327BAB9C442B9E7ABB7C /* PermissionKitMotion.swift */,
-				B32A3B05E8138944A0ECF85A0DEEB6AE /* PermissionKitNotifications.swift */,
-				91443AC84678AFB639D1E843ADDCFBE7 /* PermissionKitPhoto.swift */,
-				49E14B1BC13C8527D67366C5A163EF72 /* PermissionKitReminders.swift */,
-				FD6F0B87A95E9A72C671B0A2E506C526 /* PermissionKitSpeechRecognizer.swift */,
+				1B318B02F528910E20CBE408B834C2CA /* PermissionsKitBluetooth.swift */,
+				A9E0B330122DF9A150FFF83E8153206B /* PermissionsKitCamera.swift */,
+				DC52A714282F60E665CED3B23E22174E /* PermissionsKitCloudKit.swift */,
+				D964370EB00048C30FAECD01B353FCA0 /* PermissionsKitContacts.swift */,
+				8EE1B0F7D1ECA94C6E3B5B6D4914F007 /* PermissionsKitEvents.swift */,
+				204E04904A498376746A0C0B695C2DF0 /* PermissionsKitHealth.swift */,
+				7491D126066354A4744167BD6D9469E8 /* PermissionsKitMediaLibrary.swift */,
+				B1C3FE08676EB534E9AE55317C2ACC02 /* PermissionsKitMicrophone.swift */,
+				D58C96B24983327BAB9C442B9E7ABB7C /* PermissionsKitMotion.swift */,
+				B32A3B05E8138944A0ECF85A0DEEB6AE /* PermissionsKitNotifications.swift */,
+				91443AC84678AFB639D1E843ADDCFBE7 /* PermissionsKitPhoto.swift */,
+				49E14B1BC13C8527D67366C5A163EF72 /* PermissionsKitReminders.swift */,
+				FD6F0B87A95E9A72C671B0A2E506C526 /* PermissionsKitSpeechRecognizer.swift */,
 				86E21BC1D260729D98C709D0059BF1AC /* Location */,
 			);
 			name = Permissions;
@@ -402,29 +401,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DE2B986D653782D29D77A9EDD3149CC /* PermissionKitAlert.swift in Sources */,
-				C506721872A82AB3A5505BFE22953819 /* PermissionKitBase.swift in Sources */,
-				F923C6AA2D9AFBB0770B7B7D5B936045 /* PermissionKitBluetooth.swift in Sources */,
-				440322DED7224599B22973B7085F4DCB /* PermissionKitCamera.swift in Sources */,
-				7C2BA47E0D57920B2D8633113A813A86 /* PermissionKitCloudKit.swift in Sources */,
-				12B381B260BB8CD8B313050D1CB0092B /* PermissionKitConfigurations.swift in Sources */,
-				CD1CF523A1AFFE532E1A9745D3B357E5 /* PermissionKitContacts.swift in Sources */,
-				8903636CEACB647A4D67C70E5D858327 /* PermissionKitEvents.swift in Sources */,
-				06A2CD6DCEA1BD19CE584EF277714722 /* PermissionKitFrequency.swift in Sources */,
-				55D4DBC9D566461E38D6F54D38CFB301 /* PermissionKitHealth.swift in Sources */,
-				4B9BFC7D4B6DF254148DE81C1A994804 /* PermissionKitLocalizationManager.swift in Sources */,
-				6353161630B810919710604AE34DA474 /* PermissionKitLocationAlways.swift in Sources */,
-				4661EC0E14147B0F5451D95A4EB42D38 /* PermissionKitLocationBase.swift in Sources */,
-				A9DBA1A42109ACE64077A6FEEAF61AF7 /* PermissionKitLocationWhenInUse.swift in Sources */,
-				8AA85F523838FA4C99FFFDEE7EB567D4 /* PermissionKitMediaLibrary.swift in Sources */,
-				B4008CD59A780042D95A0836D6F82384 /* PermissionKitMicrophone.swift in Sources */,
-				724C84E9DE3180553218BEE53E88D9D7 /* PermissionKitMotion.swift in Sources */,
-				4467AA454D02E69F8CA42DDD511E47C1 /* PermissionKitNotifications.swift in Sources */,
-				5A739A335D658734E5A664B56F5C2593 /* PermissionKitPhoto.swift in Sources */,
-				EC4D791DFDC79E52B880B034F929B2E2 /* PermissionKitProtocol.swift in Sources */,
-				112C4D3CAF381475DE44B0677A72A264 /* PermissionKitReminders.swift in Sources */,
-				286512A4C68682959B4203219423FD2F /* PermissionKitSpeechRecognizer.swift in Sources */,
-				F6BFB057EB2640C7E8DEEBB66C756347 /* PermissionKitStatus.swift in Sources */,
+				8DE2B986D653782D29D77A9EDD3149CC /* PermissionsKitAlert.swift in Sources */,
+				C506721872A82AB3A5505BFE22953819 /* PermissionsKitBase.swift in Sources */,
+				F923C6AA2D9AFBB0770B7B7D5B936045 /* PermissionsKitBluetooth.swift in Sources */,
+				440322DED7224599B22973B7085F4DCB /* PermissionsKitCamera.swift in Sources */,
+				7C2BA47E0D57920B2D8633113A813A86 /* PermissionsKitCloudKit.swift in Sources */,
+				12B381B260BB8CD8B313050D1CB0092B /* PermissionsKitConfigurations.swift in Sources */,
+				CD1CF523A1AFFE532E1A9745D3B357E5 /* PermissionsKitContacts.swift in Sources */,
+				8903636CEACB647A4D67C70E5D858327 /* PermissionsKitEvents.swift in Sources */,
+				06A2CD6DCEA1BD19CE584EF277714722 /* PermissionsKitFrequency.swift in Sources */,
+				55D4DBC9D566461E38D6F54D38CFB301 /* PermissionsKitHealth.swift in Sources */,
+				4B9BFC7D4B6DF254148DE81C1A994804 /* PermissionsKitLocalizationManager.swift in Sources */,
+				6353161630B810919710604AE34DA474 /* PermissionsKitLocationAlways.swift in Sources */,
+				4661EC0E14147B0F5451D95A4EB42D38 /* PermissionsKitLocationBase.swift in Sources */,
+				A9DBA1A42109ACE64077A6FEEAF61AF7 /* PermissionsKitLocationWhenInUse.swift in Sources */,
+				8AA85F523838FA4C99FFFDEE7EB567D4 /* PermissionsKitMediaLibrary.swift in Sources */,
+				B4008CD59A780042D95A0836D6F82384 /* PermissionsKitMicrophone.swift in Sources */,
+				724C84E9DE3180553218BEE53E88D9D7 /* PermissionsKitMotion.swift in Sources */,
+				4467AA454D02E69F8CA42DDD511E47C1 /* PermissionsKitNotifications.swift in Sources */,
+				5A739A335D658734E5A664B56F5C2593 /* PermissionsKitPhoto.swift in Sources */,
+				EC4D791DFDC79E52B880B034F929B2E2 /* PermissionsKitProtocol.swift in Sources */,
+				112C4D3CAF381475DE44B0677A72A264 /* PermissionsKitReminders.swift in Sources */,
+				286512A4C68682959B4203219423FD2F /* PermissionsKitSpeechRecognizer.swift in Sources */,
+				F6BFB057EB2640C7E8DEEBB66C756347 /* PermissionsKitStatus.swift in Sources */,
 				BED08BBCA178DDD1B634AF833621B9C6 /* PermissionsKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

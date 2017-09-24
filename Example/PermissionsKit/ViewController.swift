@@ -2,8 +2,8 @@ import UIKit
 import PermissionsKit
 
 struct ExamplePermission {
-    var permission: PermissionKitBase
-
+    
+    var permission: PermissionsKitBase
     var title: String
 }
 
@@ -19,16 +19,16 @@ extension ViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        return PermissionKitCellVMServiceProgrammatically.permissionCount
+        return PermissionsKitCellVMServiceProgrammatically.permissionCount
     }
 
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PermissionKitCell", for: indexPath) as? PermissionKitCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PermissionsKitCell", for: indexPath) as? PermissionsKitCell else {
             fatalError()
         }
 
-        cell.viewModel = PermissionKitCellVMServiceProgrammatically.buildVM(index: indexPath.row)
+        cell.viewModel = PermissionsKitCellVMServiceProgrammatically.buildVM(index: indexPath.row)
 
         return cell
     }
@@ -42,7 +42,7 @@ extension ViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
-        guard let cell = tableView.cellForRow(at: indexPath) as? PermissionKitCell else {
+        guard let cell = tableView.cellForRow(at: indexPath) as? PermissionsKitCell else {
             fatalError()
         }
 
