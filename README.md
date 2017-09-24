@@ -1,6 +1,7 @@
 # PermissionsKit
 
-[![CI Status](http://img.shields.io/travis/Multinerd-Swift/PermissionsKit.svg?style=flat)](https://travis-ci.org/Multinerd-Swift/PermissionsKit)
+
+[![CI Status](https://img.shields.io/travis/Multinerd-Swift/PermissionsKit.svg?style=flat&colorA=212121)](https://travis-ci.org/Multinerd-Swift/PermissionsKit)
 [![codebeat badge](https://codebeat.co/badges/066bdbfe-2670-41a0-86e0-a1afab3f2be8)](https://codebeat.co/projects/github-com-multinerd-swift-permissionskit-master)
 
 `PermissionsKit` is a simple to use wrapper to request any kind of permission.  
