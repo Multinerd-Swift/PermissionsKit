@@ -1,14 +1,14 @@
 # PermissionsKit
 
 
-[![CI Status](https://img.shields.io/travis/Multinerd-Swift/PermissionsKit.svg?style=flat&colorA=212121)](https://travis-ci.org/Multinerd-Swift/PermissionsKit)
 [![codebeat badge](https://codebeat.co/badges/066bdbfe-2670-41a0-86e0-a1afab3f2be8)](https://codebeat.co/projects/github-com-multinerd-swift-permissionskit-master)
+[![CI Status](https://img.shields.io/travis/Multinerd-Swift/PermissionsKit.svg?style=flat&colorA=212121)](https://travis-ci.org/Multinerd-Swift/PermissionsKit)
 
 `PermissionsKit` is a simple to use wrapper to request any kind of permission.  
 
 Every goal could be easily reached using `PermissionsKit`.
 * Show a alert to avoid burning your **ONLY** system request.
-* Show a alert to re-enable the permission if it has been denied.
+* Show a alert to re-enable the permission if it has been disabled.
 * Manage request frequency via `PermissionsKitConfigurations`
 * Implemented Permissions
   - [x] Camera
@@ -38,6 +38,7 @@ Every goal could be easily reached using `PermissionsKit`.
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
+* [Credits](#credits)
 
 
 
@@ -179,3 +180,12 @@ PermissionsKit is available under the MIT license. See the [license][licenseURL]
 
 [licenseBadge]: https://img.shields.io/badge/license-MIT-a.svg?style=flat&colorA=212121&colorB=616161
 [licenseURL]: https://github.com/Multinerd-Swift/PermissionsKit/blob/master/LICENSE
+
+
+
+
+
+<a name="credits"></a>
+## Credits
+
+This library is based off [AREK]( https://github.com/ennioma/arek)
