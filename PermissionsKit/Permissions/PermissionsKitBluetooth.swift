@@ -1,28 +1,28 @@
 import CoreBluetooth
 
-public final class PermissionKitBluetooth: PermissionKitBase {
+public final class PermissionsKitBluetooth: PermissionsKitBase {
 
-    let bluetooth = PermissionKitBluetoothDelegate()
+    let bluetooth = PermissionsKitBluetoothDelegate()
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitBluetooth: PermissionKitProtocol {
+extension PermissionsKitBluetooth: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitBluetooth"
+        return "PermissionsKitBluetooth"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         bluetooth.completion = completion
 
@@ -38,21 +38,21 @@ extension PermissionKitBluetooth: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         bluetooth.completion = completion
 
         switch bluetooth.bluetoothManager.state {
             case .unauthorized:
-                print("[PermissionKit.Bluetooth] bluetooth not authorized by the user ⛔️")
+                print("[PermissionsKit.Bluetooth] bluetooth not authorized by the user ⛔️")
                 return completion(.denied)
 
             case .unsupported, .poweredOff, .resetting:
-                print("[PermissionKit.Bluetooth] bluetooth not available 🚫")
+                print("[PermissionsKit.Bluetooth] bluetooth not available 🚫")
                 return completion(.notAvailable)
 
             case .unknown:
-                print("[PermissionKit.Bluetooth] bluetooth could not be determined 🤔")
+                print("[PermissionsKit.Bluetooth] bluetooth could not be determined 🤔")
                 return completion(.notDetermined)
 
             case .poweredOn:
@@ -64,11 +64,11 @@ extension PermissionKitBluetooth: PermissionKitProtocol {
 
 }
 
-class PermissionKitBluetoothDelegate: NSObject, CBPeripheralManagerDelegate {
+class PermissionsKitBluetoothDelegate: NSObject, CBPeripheralManagerDelegate {
 
     fileprivate var bluetoothManager: CBPeripheralManager!
 
-    fileprivate var completion: PermissionKitResponse?
+    fileprivate var completion: PermissionsKitResponse?
 
     public override init() {
 
@@ -80,25 +80,25 @@ class PermissionKitBluetoothDelegate: NSObject, CBPeripheralManagerDelegate {
 
         switch peripheral.state {
             case .unauthorized:
-                print("[PermissionKit.Bluetooth] bluetooth permission denied by user ⛔️")
+                print("[PermissionsKit.Bluetooth] bluetooth permission denied by user ⛔️")
                 if let completion = self.completion {
                     return completion(.denied)
                 }
 
             case .unsupported, .poweredOff, .resetting:
-                print("[PermissionKit.Bluetooth] bluetooth not available 🚫")
+                print("[PermissionsKit.Bluetooth] bluetooth not available 🚫")
                 if let completion = self.completion {
                     return completion(.notAvailable)
                 }
 
             case .unknown:
-                print("[PermissionKit.Bluetooth] bluetooth could not be determined 🤔")
+                print("[PermissionsKit.Bluetooth] bluetooth could not be determined 🤔")
                 if let completion = self.completion {
                     return completion(.notDetermined)
                 }
 
             case .poweredOn:
-                print("[PermissionKit.Bluetooth] bluetooth permission authorized by user ✅")
+                print("[PermissionsKit.Bluetooth] bluetooth permission authorized by user ✅")
                 if let completion = self.completion {
                     return completion(.authorized)
                 }

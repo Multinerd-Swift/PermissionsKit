@@ -1,14 +1,14 @@
 import Contacts
 
 @available(iOS 9.0, *)
-public final class PermissionKitContacts: PermissionKitBase {
+public final class PermissionsKitContacts: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
@@ -16,13 +16,13 @@ public final class PermissionKitContacts: PermissionKitBase {
 }
 
 @available(iOS 9.0, *)
-extension PermissionKitContacts: PermissionKitProtocol {
+extension PermissionsKitContacts: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitContacts"
+        return "PermissionsKitContacts"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         switch CNContactStore.authorizationStatus(for: .contacts) {
             case .authorized: return completion(.authorized)
@@ -31,21 +31,21 @@ extension PermissionKitContacts: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         CNContactStore().requestAccess(for: .contacts, completionHandler: { granted, error in
 
             if let error = error {
-                print("[PermissionKit.Contacts] 🎫 not determined 🤔 error: \(error)")
+                print("[PermissionsKit.Contacts] 🎫 not determined 🤔 error: \(error)")
                 return completion(.notDetermined)
             }
 
             if granted {
-                print("[PermissionKit.Contacts] 🎫 permission authorized by user ✅")
+                print("[PermissionsKit.Contacts] 🎫 permission authorized by user ✅")
                 return completion(.authorized)
             }
 
-            print("[PermissionKit.Contacts] 🎫 denied by user ⛔️")
+            print("[PermissionsKit.Contacts] 🎫 denied by user ⛔️")
             return completion(.denied)
         })
     }

@@ -1,13 +1,13 @@
 import UserNotifications
 
-public final class PermissionKitNotifications: PermissionKitBase {
+public final class PermissionsKitNotifications: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
@@ -20,13 +20,13 @@ public final class PermissionKitNotifications: PermissionKitBase {
     }
 }
 
-extension PermissionKitNotifications: PermissionKitProtocol {
+extension PermissionsKitNotifications: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitNotifications"
+        return "PermissionsKitNotifications"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
             switch settings.authorizationStatus {
@@ -37,22 +37,22 @@ extension PermissionKitNotifications: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         UNUserNotificationCenter.current().requestAuthorization(options: [ .alert, .badge, .sound ]) { (granted, error) in
 
             if let error = error {
-                print("[PermissionKit.Notifications] Push notifications permission not determined 🤔, error: \(error)")
+                print("[PermissionsKit.Notifications] Push notifications permission not determined 🤔, error: \(error)")
                 return completion(.notDetermined)
             }
 
             if granted {
                 self.registerForRemoteNotifications()
-                print("[PermissionKit.Notifications] Push notifications permission authorized by user ✅")
+                print("[PermissionsKit.Notifications] Push notifications permission authorized by user ✅")
                 return completion(.authorized)
             }
 
-            print("[PermissionKit.Notifications] Push notifications permission denied by user ⛔️")
+            print("[PermissionsKit.Notifications] Push notifications permission denied by user ⛔️")
             return completion(.denied)
         }
     }

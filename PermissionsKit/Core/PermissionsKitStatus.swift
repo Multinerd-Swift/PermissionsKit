@@ -1,5 +1,5 @@
 /// Status to represent current permissions.
-public enum PermissionKitStatus {
+public enum PermissionsKitStatus {
     case authorized
     case denied
     case notDetermined

@@ -1,35 +1,35 @@
 import UIKit
 
-/// PermissionKitBase is a root class and each permission inherit from it.
-/// Don't instantiate PermissionKitBase directly.
-public class PermissionKitBase {
+/// PermissionsKitBase is a root class and each permission inherit from it.
+/// Don't instantiate PermissionsKitBase directly.
+public class PermissionsKitBase {
 
-    var configuration: PermissionKitConfigurations = PermissionKitConfigurations(frequency: .always, presentInitialPopup: true, presentReEnablePopup: true)
-    var initialPopupData: PermissionKitAlert = PermissionKitAlert()
-    var reEnablePopupData: PermissionKitAlert = PermissionKitAlert()
+    var configuration: PermissionsKitConfigurations = PermissionsKitConfigurations(frequency: .always, presentInitialPopup: true, presentReEnablePopup: true)
+    var initialPopupData: PermissionsKitAlert = PermissionsKitAlert()
+    var reEnablePopupData: PermissionsKitAlert = PermissionsKitAlert()
 
     init(identifier: String) {
 
-        let data = PermissionKitLocalizationManager(permission: identifier)
-        self.initialPopupData = PermissionKitAlert(title: data.initialTitle, message: data.initialMessage, allowButtonTitle: data.initialAllowButtonTitle, denyButtonTitle: data.initialDenyButtonTitle)
-        self.reEnablePopupData = PermissionKitAlert(title: data.reEnableTitle, message: data.reEnableMessage, allowButtonTitle: data.reEnableAllowButtonTitle, denyButtonTitle: data.reEnableDenyButtonTitle)
+        let data = PermissionsKitLocalizationManager(permission: identifier)
+        self.initialPopupData = PermissionsKitAlert(title: data.initialTitle, message: data.initialMessage, allowButtonTitle: data.initialAllowButtonTitle, denyButtonTitle: data.initialDenyButtonTitle)
+        self.reEnablePopupData = PermissionsKitAlert(title: data.reEnableTitle, message: data.reEnableMessage, allowButtonTitle: data.reEnableAllowButtonTitle, denyButtonTitle: data.reEnableDenyButtonTitle)
     }
 
-    init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         self.configuration = configuration ?? self.configuration
         self.initialPopupData = initialPopupData ?? self.initialPopupData
         self.reEnablePopupData = reEnablePopupData ?? self.reEnablePopupData
     }
 
-    open func manage(completion: @escaping PermissionKitResponse) {
+    open func manage(completion: @escaping PermissionsKitResponse) {
 
-        (self as? PermissionKitProtocol)?.status { status in
+        (self as? PermissionsKitProtocol)?.status { status in
             self.managePermission(status: status, completion: completion)
         }
     }
 
-    internal func managePermission(status: PermissionKitStatus, completion: @escaping PermissionKitResponse) {
+    internal func managePermission(status: PermissionsKitStatus, completion: @escaping PermissionsKitResponse) {
 
         switch status {
             case .notAvailable: break
@@ -44,25 +44,25 @@ public class PermissionKitBase {
 
 }
 
-extension PermissionKitBase {
+extension PermissionsKitBase {
 
     // MARK: *** Manage Initial Popup ***
 
-    func manageInitialPopup(completion: @escaping PermissionKitResponse) {
+    func manageInitialPopup(completion: @escaping PermissionsKitResponse) {
 
         if self.configuration.presentInitialPopup {
             self.presentInitialPopup(title: self.initialPopupData.title, message: self.initialPopupData.message, allowButtonTitle: self.initialPopupData.allowButtonTitle, denyButtonTitle: self.initialPopupData.denyButtonTitle, completion: completion)
         } else {
-            (self as? PermissionKitProtocol)?.askForPermission(completion: completion)
+            (self as? PermissionsKitProtocol)?.askForPermission(completion: completion)
         }
     }
 
-    private func presentInitialPopup(title: String, message: String, allowButtonTitle: String, denyButtonTitle: String, completion: @escaping PermissionKitResponse) {
+    private func presentInitialPopup(title: String, message: String, allowButtonTitle: String, denyButtonTitle: String, completion: @escaping PermissionsKitResponse) {
 
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
 
         let allow = UIAlertAction(title: allowButtonTitle, style: .default) { _ in
-            (self as? PermissionKitProtocol)?.askForPermission(completion: completion)
+            (self as? PermissionsKitProtocol)?.askForPermission(completion: completion)
             alert.dismiss(animated: true, completion: nil)
         }
 
@@ -87,14 +87,14 @@ extension PermissionKitBase {
 
     func presentReEnablePopup() {
 
-        guard let permission = self as? PermissionKitProtocol else {
+        guard let permission = self as? PermissionsKitProtocol else {
             return
         }
 
         if self.configuration.canPresentReEnablePopup(permission: permission) {
             self.presentReEnablePopup(title: self.reEnablePopupData.title, message: self.reEnablePopupData.message, allowButtonTitle: self.reEnablePopupData.allowButtonTitle, denyButtonTitle: self.reEnablePopupData.denyButtonTitle)
         } else {
-            print("[PermissionKit] for \(self) present re-enable not allowed")
+            print("[PermissionsKit] for \(self) present re-enable not allowed")
         }
     }
 

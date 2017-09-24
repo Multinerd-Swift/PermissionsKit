@@ -1,26 +1,26 @@
 import AVFoundation
 
-public final class PermissionKitMicrophone: PermissionKitBase {
+public final class PermissionsKitMicrophone: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitMicrophone: PermissionKitProtocol {
+extension PermissionsKitMicrophone: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitMicrophone"
+        return "PermissionsKitMicrophone"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         switch AVAudioSession.sharedInstance().recordPermission() {
             case .undetermined: return completion(.notDetermined)
@@ -29,16 +29,16 @@ extension PermissionKitMicrophone: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         AVAudioSession.sharedInstance().requestRecordPermission { (granted) in
 
             if granted {
-                print("[PermissionKit.Microphone] 🎤 permission authorized by user ✅")
+                print("[PermissionsKit.Microphone] 🎤 permission authorized by user ✅")
                 return completion(.authorized)
             }
 
-            print("[PermissionKit.Microphone] 🎤 permission denied by user ⛔️")
+            print("[PermissionsKit.Microphone] 🎤 permission denied by user ⛔️")
             return completion(.denied)
         }
     }

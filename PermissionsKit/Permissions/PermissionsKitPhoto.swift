@@ -1,26 +1,26 @@
 import Photos
 
-public final class PermissionKitPhoto: PermissionKitBase {
+public final class PermissionsKitPhoto: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitPhoto: PermissionKitProtocol {
+extension PermissionsKitPhoto: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitPhoto"
+        return "PermissionsKitPhoto"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         switch PHPhotoLibrary.authorizationStatus() {
             case .notDetermined: return completion(.notDetermined)
@@ -29,21 +29,21 @@ extension PermissionKitPhoto: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         PHPhotoLibrary.requestAuthorization { (status) in
 
             switch status {
                 case .notDetermined:
-                    print("[PermissionKit.Photos] 🌅 permission not determined 🤔")
+                    print("[PermissionsKit.Photos] 🌅 permission not determined 🤔")
                     return completion(.notDetermined)
 
                 case .restricted, .denied:
-                    print("[PermissionKit.Photos] 🌅 permission denied by user ⛔️")
+                    print("[PermissionsKit.Photos] 🌅 permission denied by user ⛔️")
                     return completion(.denied)
 
                 case .authorized:
-                    print("[PermissionKit.Photos] 🌅 permission authorized by user ✅")
+                    print("[PermissionsKit.Photos] 🌅 permission authorized by user ✅")
                     return completion(.authorized)
             }
         }

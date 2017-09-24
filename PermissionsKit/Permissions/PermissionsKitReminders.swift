@@ -1,26 +1,26 @@
 import EventKit
 
-public final class PermissionKitReminders: PermissionKitBase {
+public final class PermissionsKitReminders: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitReminders: PermissionKitProtocol {
+extension PermissionsKitReminders: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitReminders"
+        return "PermissionsKitReminders"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         let status = EKEventStore.authorizationStatus(for: .reminder)
         switch status {
@@ -30,21 +30,21 @@ extension PermissionKitReminders: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         EKEventStore().requestAccess(to: .reminder) { granted, error in
 
             if let error = error {
-                print("[PermissionKit.Reminders] 🎗 permission error: \(error)")
+                print("[PermissionsKit.Reminders] 🎗 permission error: \(error)")
                 return completion(.notDetermined)
             }
 
             if granted {
-                print("[PermissionKit.Reminders] 🎗 permission authorized by user ✅")
+                print("[PermissionsKit.Reminders] 🎗 permission authorized by user ✅")
                 return completion(.authorized)
             }
 
-            print("[PermissionKit.Reminders] 🎗 permission denied by user ⛔️")
+            print("[PermissionsKit.Reminders] 🎗 permission denied by user ⛔️")
             return completion(.denied)
         }
     }

@@ -1,4 +1,4 @@
-public struct PermissionKitAlert {
+public struct PermissionsKitAlert {
 
     var title: String!
     var message: String!

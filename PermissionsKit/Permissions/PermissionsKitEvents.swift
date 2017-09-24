@@ -1,26 +1,26 @@
 import EventKit
 
-public final class PermissionKitEvents: PermissionKitBase {
+public final class PermissionsKitEvents: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitEvents: PermissionKitProtocol {
+extension PermissionsKitEvents: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitEvents"
+        return "PermissionsKitEvents"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         let status = EKEventStore.authorizationStatus(for: .event)
         switch status {
@@ -30,21 +30,21 @@ extension PermissionKitEvents: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         EKEventStore().requestAccess(to: .event) { granted, error in
 
             if let error = error {
-                print("[PermissionKit.Events] 📆 permission not determined 🤔, error \(error)")
+                print("[PermissionsKit.Events] 📆 permission not determined 🤔, error \(error)")
                 return completion(.notDetermined)
             }
 
             if granted {
-                print("[PermissionKit.Events] 📆 permission authorized by user ✅")
+                print("[PermissionsKit.Events] 📆 permission authorized by user ✅")
                 return completion(.authorized)
             }
 
-            print("[PermissionKit.Events] 📆 permission denied by user ⛔️")
+            print("[PermissionsKit.Events] 📆 permission denied by user ⛔️")
             return completion(.denied)
         }
     }

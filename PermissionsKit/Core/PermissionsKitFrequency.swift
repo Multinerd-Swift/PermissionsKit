@@ -1,5 +1,5 @@
 /// Frequency to ask the user to present the request again
-public enum PermissionKitFrequency {
+public enum PermissionsKitFrequency {
     case always
     case everyHour
     case onceADay

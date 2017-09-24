@@ -1,26 +1,26 @@
 import MediaPlayer
 
-public final class PermissionKitMediaLibrary: PermissionKitBase {
+public final class PermissionsKitMediaLibrary: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitMediaLibrary: PermissionKitProtocol {
+extension PermissionsKitMediaLibrary: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitMediaLibrary"
+        return "PermissionsKitMediaLibrary"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         if #available(iOS 9.3, *) {
             let status = MPMediaLibrary.authorizationStatus()
@@ -34,27 +34,27 @@ extension PermissionKitMediaLibrary: PermissionKitProtocol {
         return completion(.notAvailable)
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         if #available(iOS 9.3, *) {
             MPMediaLibrary.requestAuthorization { status in
                 switch status {
                     case .authorized:
-                        print("[PermissionKit.MediaLibrary] 💽 permission authorized by user ✅")
+                        print("[PermissionsKit.MediaLibrary] 💽 permission authorized by user ✅")
                         return completion(.authorized)
 
                     case .restricted, .denied:
-                        print("[PermissionKit.MediaLibrary] 💽 permission denied by user ⛔️")
+                        print("[PermissionsKit.MediaLibrary] 💽 permission denied by user ⛔️")
                         return completion(.denied)
 
                     case .notDetermined:
-                        print("[PermissionKit.MediaLibrary] 💽 permission not determined 🤔")
+                        print("[PermissionsKit.MediaLibrary] 💽 permission not determined 🤔")
                         return completion(.notDetermined)
                 }
             }
         }
 
-        print("[PermissionKit.MediaLibrary] 💽 permission denied by iOS ⛔️")
+        print("[PermissionsKit.MediaLibrary] 💽 permission denied by iOS ⛔️")
         return completion(.notAvailable)
     }
 

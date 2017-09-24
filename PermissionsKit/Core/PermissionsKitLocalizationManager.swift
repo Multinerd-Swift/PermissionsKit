@@ -1,4 +1,4 @@
-struct PermissionKitLocalizationManager {
+struct PermissionsKitLocalizationManager {
 
     var initialTitle: String = ""
     var initialMessage: String = ""

@@ -1,12 +1,12 @@
 import CoreMotion
 
-public final class PermissionKitMotion: PermissionKitBase {
+public final class PermissionsKitMotion: PermissionsKitBase {
 
     private let motionManager = CMMotionActivityManager()
 
     private lazy var motionHandlerQueue: OperationQueue = {
         var queue = OperationQueue()
-        queue.name = "Multinerd.PermissionKit.MotionHandlerQueue"
+        queue.name = "Multinerd.PermissionsKit.MotionHandlerQueue"
         queue.maxConcurrentOperationCount = 1
         return queue
     }()
@@ -16,20 +16,20 @@ public final class PermissionKitMotion: PermissionKitBase {
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitMotion: PermissionKitProtocol {
+extension PermissionsKitMotion: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitMotion"
+        return "PermissionsKitMotion"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         if CMMotionActivityManager.isActivityAvailable() == false {
             return completion(.notAvailable)
@@ -52,7 +52,7 @@ extension PermissionKitMotion: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         if CMMotionActivityManager.isActivityAvailable() == false {
             return completion(.notAvailable)
@@ -64,16 +64,16 @@ extension PermissionKitMotion: PermissionKitProtocol {
 
             if let error = error as NSError? {
                 if [ Int(CMErrorMotionActivityNotAuthorized.rawValue), Int(CMErrorNotAuthorized.rawValue) ].contains(error.code) {
-                    print("[PermissionKit.Motion] 🏃🏻 permission denied by user ⛔️")
+                    print("[PermissionsKit.Motion] 🏃🏻 permission denied by user ⛔️")
                     return completion(.denied)
 
                 } else {
-                    print("[PermissionKit.Motion] 🏃🏻 permission not determined 🤔")
+                    print("[PermissionsKit.Motion] 🏃🏻 permission not determined 🤔")
                     return completion(.notDetermined)
                 }
             }
 
-            print("[PermissionKit.Motion] 🏃🏻 permission authorized by user ✅")
+            print("[PermissionsKit.Motion] 🏃🏻 permission authorized by user ✅")
             return completion(.authorized)
         }
     }

@@ -1,6 +1,6 @@
 import HealthKit
 
-public final class PermissionKitHealth: PermissionKitBase {
+public final class PermissionsKitHealth: PermissionsKitBase {
 
     public var hkObjectType: HKObjectType?
     public var hkSampleTypesToShare: Set<HKSampleType>?
@@ -11,20 +11,20 @@ public final class PermissionKitHealth: PermissionKitBase {
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
 }
 
-extension PermissionKitHealth: PermissionKitProtocol {
+extension PermissionsKitHealth: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitHealth"
+        return "PermissionsKitHealth"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         guard let objectType = self.hkObjectType else {
             return completion(.notDetermined)
@@ -37,26 +37,26 @@ extension PermissionKitHealth: PermissionKitProtocol {
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         if self.hkSampleTypesToRead == nil && self.hkSampleTypesToShare == nil {
-            print("[PermissionKit.HealthKit] 📈 no permissions specified 🤔")
+            print("[PermissionsKit.HealthKit] 📈 no permissions specified 🤔")
             return completion(.notDetermined)
         }
 
         HKHealthStore().requestAuthorization(toShare: self.hkSampleTypesToShare, read: self.hkSampleTypesToRead) { (granted, error) in
 
             if let error = error {
-                print("[PermissionKit.HealthKit] 📈 permission not determined 🤔 error: \(error)")
+                print("[PermissionsKit.HealthKit] 📈 permission not determined 🤔 error: \(error)")
                 return completion(.notDetermined)
             }
 
             if granted {
-                print("[PermissionKit.HealthKit] 📈 permission authorized by user ✅")
+                print("[PermissionsKit.HealthKit] 📈 permission authorized by user ✅")
                 return completion(.authorized)
             }
 
-            print("[PermissionKit.HealthKit] 📈 permission denied by user ⛔️")
+            print("[PermissionsKit.HealthKit] 📈 permission denied by user ⛔️")
             return completion(.denied)
         }
     }

@@ -1,13 +1,13 @@
 import Speech
 
-public final class PermissionKitSpeechRecognizer: PermissionKitBase {
+public final class PermissionsKitSpeechRecognizer: PermissionsKitBase {
 
     public init() {
 
         super.init(identifier: self.identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
@@ -15,13 +15,13 @@ public final class PermissionKitSpeechRecognizer: PermissionKitBase {
 }
 
 @available(iOS 10.0, *)
-extension PermissionKitSpeechRecognizer: PermissionKitProtocol {
+extension PermissionsKitSpeechRecognizer: PermissionsKitProtocol {
 
     public var identifier: String {
-        return "PermissionKitSpeechRecognizer"
+        return "PermissionsKitSpeechRecognizer"
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         let status = SFSpeechRecognizer.authorizationStatus()
         switch status {
@@ -32,25 +32,25 @@ extension PermissionKitSpeechRecognizer: PermissionKitProtocol {
 
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         SFSpeechRecognizer.requestAuthorization { status in
             switch status {
                 case .authorized:
-                    print("[PermissionKit.SpeechRecognizer] 🗣 permission authorized by user ✅")
+                    print("[PermissionsKit.SpeechRecognizer] 🗣 permission authorized by user ✅")
                     return completion(.authorized)
 
                 case .restricted, .denied:
-                    print("[PermissionKit.SpeechRecognizer] 🗣 permission denied by user ⛔️")
+                    print("[PermissionsKit.SpeechRecognizer] 🗣 permission denied by user ⛔️")
                     return completion(.denied)
 
                 case .notDetermined:
-                    print("[PermissionKit.SpeechRecognizer] 🗣 permission not determined 🤔")
+                    print("[PermissionsKit.SpeechRecognizer] 🗣 permission not determined 🤔")
                     return completion(.notDetermined)
             }
         }
 
-        print("[PermissionKit.SpeechRecognizer] 🗣 permission only available from iOS 10 ⛔️")
+        print("[PermissionsKit.SpeechRecognizer] 🗣 permission only available from iOS 10 ⛔️")
         return completion(.notAvailable)
     }
 

@@ -1,17 +1,17 @@
 import Foundation
 import CoreLocation
 
-public class PermissionKitLocationBase: PermissionKitBase, PermissionKitProtocol {
+public class PermissionsKitLocationBase: PermissionsKitBase, PermissionsKitProtocol {
 
-    public var identifier: String = "PermissionKitLocationBase"
+    public var identifier: String = "PermissionsKitLocationBase"
 
-    var completion: PermissionKitResponse? {
+    var completion: PermissionsKitResponse? {
         willSet {
-            locationDelegate = PermissionKitLocationBaseDelegate(permission: self, completion: newValue!)
+            locationDelegate = PermissionsKitLocationBaseDelegate(permission: self, completion: newValue!)
         }
     }
 
-    private var locationDelegate: PermissionKitLocationBaseDelegate?
+    private var locationDelegate: PermissionsKitLocationBaseDelegate?
 
     public init() {
 
@@ -23,12 +23,12 @@ public class PermissionKitLocationBase: PermissionKitBase, PermissionKitProtocol
         super.init(identifier: identifier)
     }
 
-    public override init(configuration: PermissionKitConfigurations? = nil, initialPopupData: PermissionKitAlert? = nil, reEnablePopupData: PermissionKitAlert? = nil) {
+    public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
 
         super.init(configuration: configuration, initialPopupData: initialPopupData, reEnablePopupData: reEnablePopupData)
     }
 
-    public func status(completion: @escaping PermissionKitResponse) {
+    public func status(completion: @escaping PermissionsKitResponse) {
 
         guard CLLocationManager.locationServicesEnabled() else {
             return completion(.notDetermined)
@@ -41,7 +41,7 @@ public class PermissionKitLocationBase: PermissionKitBase, PermissionKitProtocol
         }
     }
 
-    public func askForPermission(completion: @escaping PermissionKitResponse) {
+    public func askForPermission(completion: @escaping PermissionsKitResponse) {
 
         fatalError("askForPermission(configuration) has not been implemented. Use `requestAlwaysAuthorization` or `requestWhenInUseAuthorization` instead.")
     }
@@ -61,15 +61,15 @@ public class PermissionKitLocationBase: PermissionKitBase, PermissionKitProtocol
     }
 }
 
-public class PermissionKitLocationBaseDelegate: NSObject, CLLocationManagerDelegate {
+public class PermissionsKitLocationBaseDelegate: NSObject, CLLocationManagerDelegate {
 
     var locationManager: CLLocationManager = CLLocationManager()
 
-    var completion: PermissionKitResponse?
+    var completion: PermissionsKitResponse?
 
-    weak var permission: PermissionKitProtocol?
+    weak var permission: PermissionsKitProtocol?
 
-    public init(permission: PermissionKitProtocol, completion: @escaping PermissionKitResponse) {
+    public init(permission: PermissionsKitProtocol, completion: @escaping PermissionsKitResponse) {
 
         super.init()
         self.completion = completion
