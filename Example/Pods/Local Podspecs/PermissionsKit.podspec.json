@@ -1,0 +1,171 @@
+{
+  "name": "PermissionsKit",
+  "version": "0.1.0",
+  "summary": "A short description of PermissionsKit.",
+  "homepage": "https://github.com/Multinerd-Swift/PermissionsKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Multinerd": "multinerd@users.noreply.github.com"
+  },
+  "source": {
+    "git": "https://github.com/Multinerd-Swift/PermissionsKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "10.0"
+  },
+  "source_files": [
+    "PermissionsKit/**/*.swift",
+    "PermissionsKit/Core/**/*.swift",
+    "PermissionsKit/Permissions/**/*.swift"
+  ],
+  "frameworks": "UIKit",
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "PermissionsKit/Core/**/*.swift"
+    },
+    {
+      "name": "Bluetooth",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitBluetooth.swift",
+      "frameworks": "CoreBluetooth"
+    },
+    {
+      "name": "Camera",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitCamera.swift",
+      "frameworks": "AVFoundation"
+    },
+    {
+      "name": "CloudKit",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitCloudKit.swift",
+      "frameworks": "CloudKit"
+    },
+    {
+      "name": "Contacts",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitContacts.swift",
+      "frameworks": "AddressBook"
+    },
+    {
+      "name": "Events",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitEvents.swift",
+      "frameworks": "EventKit"
+    },
+    {
+      "name": "Health",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitHealth.swift",
+      "frameworks": "HealthKit"
+    },
+    {
+      "name": "Location",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/Location/*.swift",
+      "frameworks": "CoreLocation"
+    },
+    {
+      "name": "MediaLibrary",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitMediaLibrary.swift",
+      "frameworks": "MediaPlayer"
+    },
+    {
+      "name": "Microphone",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitMicrophone.swift",
+      "frameworks": "AVFoundation"
+    },
+    {
+      "name": "Motion",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitMotion.swift",
+      "frameworks": "CoreMotion"
+    },
+    {
+      "name": "Notifications",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitNotifications.swift"
+    },
+    {
+      "name": "Photos",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitPhoto.swift",
+      "frameworks": "AssetsLibrary"
+    },
+    {
+      "name": "Reminders",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitReminders.swift",
+      "frameworks": "EventKit"
+    },
+    {
+      "name": "SpeechRecognizer",
+      "dependencies": {
+        "PermissionsKit/Core": [
+
+        ]
+      },
+      "source_files": "PermissionsKit/Permissions/PermissionsKitSpeechRecognizer.swift",
+      "frameworks": "Speech"
+    }
+  ]
+}

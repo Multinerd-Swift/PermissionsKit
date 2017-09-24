@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+	</array>
+    <key>NSAppleMusicUsageDescription</key>
+    <string>NSAppleMusicUsageDescription</string>
+    <key>NSBluetoothPeripheralUsageDescription</key>
+    <string>NSBluetoothPeripheralUsageDescription</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>NSCalendarsUsageDescription</string>
+    <key>NSCameraUsageDescription</key>
+    <string>NSCameraUsageDescription</string>
+    <key>NSContactsUsageDescription</key>
+    <string>NSContactsUsageDescription</string>
+    <key>NSHealthShareUsageDescription</key>
+    <string>NSHealthShareUsageDescription</string>
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>NSHealthUpdateUsageDescription</string>
+    <key>NSHomeKitUsageDescription</key>
+    <string>NSHomeKitUsageDescription</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>NSLocationAlwaysUsageDescription</string>
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>NSLocationAlwaysAndWhenInUseUsageDescription</string>
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>NSLocationWhenInUseUsageDescription</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>NSMicrophoneUsageDescription</string>
+    <key>NSMotionUsageDescription</key>
+    <string>NSMotionUsageDescription</string>
+    <key>NSPhotoLibraryAddUsageDescription</key>
+    <string>NSPhotoLibraryAddUsageDescription</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>NSPhotoLibraryUsageDescription</string>
+    <key>NSRemindersUsageDescription</key>
+    <string>NSRemindersUsageDescription</string>
+    <key>NSSpeechRecognitionUsageDescription</key>
+    <string>NSSpeechRecognitionUsageDescription</string>
+
+</dict>
+</plist>
