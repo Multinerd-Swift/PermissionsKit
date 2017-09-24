@@ -2,8 +2,13 @@ import Foundation
 
 public struct PermissionKitConfigurations {
 
+    /// How frequently should we prompt the user to re-enable permission.
     var frequency: PermissionKitFrequency = .onceADay
+
+    /// Determines whether we should show an alert to prevent burning the only ios request. Defaults to true.
     var presentInitialPopup: Bool = true
+
+    /// Determines whether we should show an alert to re-enable a permission.
     var presentReEnablePopup: Bool = true
 
     private let week = 60.0 * 60.0 * 24.0 * 7.0
