@@ -9,8 +9,7 @@ before_install:
 - gem install cocoapods
 - pod install --repo-update --project-directory=Example
 script:
-- pod lib lint --quick
+- pod lib lint
 - cd Example
 - xcodebuild -workspace PermissionsKit.xcworkspace -scheme PermissionsKit-Example -sdk iphonesimulator -destination 'platform=iOS Simulator,name=iPhone 8,OS=11.0' build
-after_success:
-- bash <(curl -s https://codecov.io/bash) -F ios -t 77b63e29-cb31-4a15-8179-108ad56ec595
+

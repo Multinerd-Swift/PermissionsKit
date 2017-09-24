@@ -25,7 +25,6 @@
 		3B0DC5801F7846E40091B3E7 /* .travis.yml */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		3B0DC5811F7846E40091B3E7 /* .swift-version */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = ".swift-version"; path = "../.swift-version"; sourceTree = "<group>"; };
 		3B0DC5821F7846E40091B3E7 /* .gitignore */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = .gitignore; path = ../.gitignore; sourceTree = "<group>"; };
-		3B0DC5831F786A2C0091B3E7 /* codecov.yml */ = {isa = PBXFileReference; lastKnownFileType = text; name = codecov.yml; path = ../codecov.yml; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* PermissionsKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PermissionsKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,7 +117,6 @@
 				C98661C1C69F07E8F3F2CBFF /* README.md */,
 				73DD7B267384DA30F48A9612 /* PermissionsKit.podspec */,
 				3B0DC5801F7846E40091B3E7 /* .travis.yml */,
-				3B0DC5831F786A2C0091B3E7 /* codecov.yml */,
 			);
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
