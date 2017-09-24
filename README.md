@@ -7,8 +7,8 @@
 `PermissionsKit` is a simple to use wrapper to request any kind of permission.  
 
 Every goal could be easily reached using `PermissionsKit`.
-* Show a alert to avoid burning your **ONLY** system request.
-* Show a alert to re-enable the permission if it has been disabled.
+* Show an alert to avoid burning your **ONLY** system request.
+* Show an alert to re-enable the permission if it has been disabled.
 * Manage request frequency via `PermissionsKitConfigurations`
 * Implemented Permissions
   - [x] Camera
