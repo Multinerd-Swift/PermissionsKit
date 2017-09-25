@@ -134,10 +134,13 @@ permission.status { (status) in
     switch status {
         case .authorized:    
             print("Can use the camera.")
+            
         case .denied:        
             print("Camera access is denied.")
+            
         case .notDetermined: 
             print("Unable to get camera permissions.")
+            
         case .notAvailable:  
             print("Camera was not detected.")
     }
