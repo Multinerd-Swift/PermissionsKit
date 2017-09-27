@@ -1,4 +1,3 @@
-import Foundation
 import CoreLocation
 
 public class PermissionsKitLocationBase: PermissionsKitBase, PermissionsKitProtocol {

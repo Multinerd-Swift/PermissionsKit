@@ -1,5 +1,3 @@
-import UIKit
-
 /// PermissionsKitBase is a root class and each permission inherit from it.
 /// Don't instantiate PermissionsKitBase directly.
 public class PermissionsKitBase {

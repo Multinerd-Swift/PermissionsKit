@@ -1,5 +1,3 @@
-import Foundation
-
 public typealias PermissionsKitResponse = (PermissionsKitStatus) -> Void
 
 public protocol PermissionsKitProtocol: class {

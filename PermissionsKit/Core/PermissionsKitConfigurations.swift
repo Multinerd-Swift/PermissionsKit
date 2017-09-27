@@ -1,5 +1,3 @@
-import Foundation
-
 public struct PermissionsKitConfigurations {
 
     /// How frequently should we prompt the user to re-enable permission.
