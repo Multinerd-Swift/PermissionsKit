@@ -3,6 +3,7 @@
 
 [![codebeat badge](https://codebeat.co/badges/066bdbfe-2670-41a0-86e0-a1afab3f2be8)](https://codebeat.co/projects/github-com-multinerd-swift-permissionskit-master)
 [![CI Status](https://img.shields.io/travis/Multinerd-Swift/PermissionsKit.svg?style=flat&colorA=212121)](https://travis-ci.org/Multinerd-Swift/PermissionsKit)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMultinerd-Swift%2FPermissionsKit.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FMultinerd-Swift%2FPermissionsKit?ref=badge_shield)
 
 `PermissionsKit` is a simple to use wrapper to request any kind of permission.  
 
@@ -189,6 +190,9 @@ PermissionsKit is available under the MIT license. See the [license][licenseURL]
 
 
 <a name="credits"></a>
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FMultinerd-Swift%2FPermissionsKit.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2FMultinerd-Swift%2FPermissionsKit?ref=badge_large)
+
 ## Credits
 
 This library is based off [AREK]( https://github.com/ennioma/arek)
