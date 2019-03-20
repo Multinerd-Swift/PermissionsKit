@@ -2,6 +2,8 @@ import AVFoundation
 
 public final class PermissionsKitCamera: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitCamera"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -15,10 +17,6 @@ public final class PermissionsKitCamera: PermissionsKitBase {
 }
 
 extension PermissionsKitCamera: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitCamera"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

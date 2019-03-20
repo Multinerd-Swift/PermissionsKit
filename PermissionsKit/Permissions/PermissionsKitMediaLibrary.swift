@@ -2,6 +2,8 @@ import MediaPlayer
 
 public final class PermissionsKitMediaLibrary: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitMediaLibrary"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -15,10 +17,6 @@ public final class PermissionsKitMediaLibrary: PermissionsKitBase {
 }
 
 extension PermissionsKitMediaLibrary: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitMediaLibrary"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

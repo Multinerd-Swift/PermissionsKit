@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     
     s.name    = 'PermissionsKit'
-    s.version = '1.0.1'
+    s.version = '1.1.0'
     s.summary = 'PermissionsKit is a wrapper to handle the various iOS permissions.'
     
     s.homepage = 'https://github.com/Multinerd-Swift/PermissionsKit'

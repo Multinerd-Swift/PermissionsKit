@@ -2,6 +2,8 @@ import CloudKit
 
 public final class PermissionsKitCloudKit: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitCloudKit"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -15,10 +17,6 @@ public final class PermissionsKitCloudKit: PermissionsKitBase {
 }
 
 extension PermissionsKitCloudKit: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitCloudKit"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

@@ -2,13 +2,15 @@ import HealthKit
 
 public final class PermissionsKitHealth: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitHealth"
+    
     public var hkObjectType: HKObjectType?
     public var hkSampleTypesToShare: Set<HKSampleType>?
     public var hkSampleTypesToRead: Set<HKSampleType>?
 
     public init() {
 
-        super.init(identifier: self.identifier)
+        super.init(identifier: "PermissionsKitHealth")
     }
 
     public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
@@ -19,10 +21,6 @@ public final class PermissionsKitHealth: PermissionsKitBase {
 }
 
 extension PermissionsKitHealth: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitHealth"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

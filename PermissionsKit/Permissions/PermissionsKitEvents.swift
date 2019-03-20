@@ -2,6 +2,8 @@ import EventKit
 
 public final class PermissionsKitEvents: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitEvents"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -15,10 +17,6 @@ public final class PermissionsKitEvents: PermissionsKitBase {
 }
 
 extension PermissionsKitEvents: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitEvents"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

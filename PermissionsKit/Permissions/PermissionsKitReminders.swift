@@ -2,6 +2,8 @@ import EventKit
 
 public final class PermissionsKitReminders: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitReminders"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -15,11 +17,7 @@ public final class PermissionsKitReminders: PermissionsKitBase {
 }
 
 extension PermissionsKitReminders: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitReminders"
-    }
-
+    
     public func status(completion: @escaping PermissionsKitResponse) {
 
         let status = EKEventStore.authorizationStatus(for: .reminder)

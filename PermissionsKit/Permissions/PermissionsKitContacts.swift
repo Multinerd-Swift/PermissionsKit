@@ -3,9 +3,11 @@ import Contacts
 @available(iOS 9.0, *)
 public final class PermissionsKitContacts: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitContacts"
+    
     public init() {
 
-        super.init(identifier: self.identifier)
+        super.init(identifier: "PermissionsKitContacts")
     }
 
     public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
@@ -18,9 +20,6 @@ public final class PermissionsKitContacts: PermissionsKitBase {
 @available(iOS 9.0, *)
 extension PermissionsKitContacts: PermissionsKitProtocol {
 
-    public var identifier: String {
-        return "PermissionsKitContacts"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

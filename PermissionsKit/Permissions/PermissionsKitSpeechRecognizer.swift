@@ -2,9 +2,11 @@ import Speech
 
 public final class PermissionsKitSpeechRecognizer: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitSpeechRecognizer"
+    
     public init() {
 
-        super.init(identifier: self.identifier)
+        super.init(identifier: "PermissionsKitSpeechRecognizer")
     }
 
     public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
@@ -16,10 +18,6 @@ public final class PermissionsKitSpeechRecognizer: PermissionsKitBase {
 
 @available(iOS 10.0, *)
 extension PermissionsKitSpeechRecognizer: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitSpeechRecognizer"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

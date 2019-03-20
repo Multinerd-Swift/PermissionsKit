@@ -2,6 +2,8 @@ import UserNotifications
 
 public final class PermissionsKitNotifications: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitNotifications"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -22,10 +24,6 @@ public final class PermissionsKitNotifications: PermissionsKitBase {
 
 extension PermissionsKitNotifications: PermissionsKitProtocol {
 
-    public var identifier: String {
-        return "PermissionsKitNotifications"
-    }
-
     public func status(completion: @escaping PermissionsKitResponse) {
 
         UNUserNotificationCenter.current().getNotificationSettings { (settings) in
@@ -33,6 +31,7 @@ extension PermissionsKitNotifications: PermissionsKitProtocol {
                 case .notDetermined: return completion(.notDetermined)
                 case .denied: return completion(.denied)
                 case .authorized: return completion(.authorized)
+                case .provisional: return completion(.authorized)
             }
         }
     }

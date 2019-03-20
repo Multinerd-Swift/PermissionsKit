@@ -2,9 +2,11 @@ import Photos
 
 public final class PermissionsKitPhoto: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitPhoto"
+    
     public init() {
 
-        super.init(identifier: self.identifier)
+        super.init(identifier: "PermissionsKitPhoto")
     }
 
     public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
@@ -15,10 +17,6 @@ public final class PermissionsKitPhoto: PermissionsKitBase {
 }
 
 extension PermissionsKitPhoto: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitPhoto"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

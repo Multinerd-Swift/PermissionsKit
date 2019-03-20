@@ -2,6 +2,8 @@ import CoreMotion
 
 public final class PermissionsKitMotion: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitMotion"
+    
     private let motionManager = CMMotionActivityManager()
 
     private lazy var motionHandlerQueue: OperationQueue = {
@@ -24,10 +26,6 @@ public final class PermissionsKitMotion: PermissionsKitBase {
 }
 
 extension PermissionsKitMotion: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitMotion"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 

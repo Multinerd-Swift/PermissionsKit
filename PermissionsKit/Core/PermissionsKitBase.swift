@@ -103,11 +103,11 @@ extension PermissionsKitBase {
         let allow = UIAlertAction(title: allowButtonTitle, style: .default) { _ in
             alert.dismiss(animated: true, completion: nil)
 
-            guard let url = URL(string: UIApplicationOpenSettingsURLString) else {
+            guard let url = URL(string: UIApplication.openSettingsURLString) else {
                 return
             }
 
-            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            UIApplication.shared.open(url, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:]), completionHandler: nil)
         }
 
         let deny = UIAlertAction(title: denyButtonTitle, style: .cancel) { _ in
@@ -126,4 +126,9 @@ extension PermissionsKitBase {
         }
     }
 
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

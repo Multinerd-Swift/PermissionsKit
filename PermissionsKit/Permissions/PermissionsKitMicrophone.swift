@@ -2,6 +2,8 @@ import AVFoundation
 
 public final class PermissionsKitMicrophone: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitMicrophone"
+    
     public init() {
 
         super.init(identifier: self.identifier)
@@ -16,13 +18,9 @@ public final class PermissionsKitMicrophone: PermissionsKitBase {
 
 extension PermissionsKitMicrophone: PermissionsKitProtocol {
 
-    public var identifier: String {
-        return "PermissionsKitMicrophone"
-    }
-
     public func status(completion: @escaping PermissionsKitResponse) {
 
-        switch AVAudioSession.sharedInstance().recordPermission() {
+        switch AVAudioSession.sharedInstance().recordPermission {
             case .undetermined: return completion(.notDetermined)
             case .granted: return completion(.authorized)
             case .denied: return completion(.denied)

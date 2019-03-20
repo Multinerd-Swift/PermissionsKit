@@ -2,11 +2,13 @@ import CoreBluetooth
 
 public final class PermissionsKitBluetooth: PermissionsKitBase {
 
+    public var identifier: String = "PermissionsKitBluetooth"
+    
     let bluetooth = PermissionsKitBluetoothDelegate()
 
     public init() {
 
-        super.init(identifier: self.identifier)
+        super.init(identifier: "PermissionsKitBluetooth")
     }
 
     public override init(configuration: PermissionsKitConfigurations? = nil, initialPopupData: PermissionsKitAlert? = nil, reEnablePopupData: PermissionsKitAlert? = nil) {
@@ -17,10 +19,6 @@ public final class PermissionsKitBluetooth: PermissionsKitBase {
 }
 
 extension PermissionsKitBluetooth: PermissionsKitProtocol {
-
-    public var identifier: String {
-        return "PermissionsKitBluetooth"
-    }
 
     public func status(completion: @escaping PermissionsKitResponse) {
 
